@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #c8c8b6;
+    padding: 2%;
+    color:#070707b2;
+}
+
+h1{
+    font-size: 60pt;
+    font-family: 'UnifrakturMaguntia', cursive;
+    text-align: center;
+    margin: 2%;
+    border-bottom: solid 1px #070707b2;
+}
+
+h2{
+    font-size: 42pt;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 250%;
+    font-weight: 600;
+}
+
+h5{
+    font-size: 150%;
+    font-weight: 300;
+}
+
+h6{
+    font-size: 200%;
+    font-weight: 600;
+}
+
+p{
+    font-size: 125%;
+}
+
+
+.custom-icon{
+    opacity: 0.7;
+}
+
+#city-panel{
+    border-right: solid 1px #070707b2;
+}
+
+#my-cities-box h3{
+    border-bottom: 1px solid #070707b2;
+}
+
+.city-btn{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 130%;
+    border: none;
+    padding: 2%;
+}
+
+.city-btn:nth-child(odd){
+    background-color: #aaaa98;
+}
+
+.city-btn:nth-child(even){
+    background-color: #c8c8b6;
+}
+
+#five-day-container{
+    border-top: 1px solid #070707b2;
+}
+
+#forecast-box{
+    border-right: solid 1px #070707b2;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 0%;
+    background-color: #c8c8b6;
+    box-shadow: none;
+    width: 20%;
+}
+
+#forecast-box:nth-child(n+5){
+    border-right: none;
+
+}

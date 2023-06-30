@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Weather App </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <h1> The Weather Times </h1>
+            <div class="col col-sm-12 col-md-4 col-lg-3 p-3" id="city-panel">
+                <div id="city-search-box" class="d-flex flex-column pb-3"> 
+                    <h3> CITY FINDER </h3>
+                    <input type="text" id="city-search-input" class="rounded-3 my-2" placeholder="Enter a city">
+                    <button id="search-button" class="rounded-3 p-2"> SEARCH </button> 
+                </div>
+                <div id="my-cities-box" class="d-flex flex-column">
+                    <h3 class="p-2"> MY CITIES </h3>
+                    <div class="city-list d-flex flex-column">
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="col col-sm-12 col-md-8 col-lg-9 p-3">
+                <div id="current-weather-box" class="d-flex flex-column border-1 mr-2">
+                    <h2 id="live-city"> City </h2>
+                    <h4 class="custom-label p-1"> Temperature <span id="live-temp" class="mx-3 fw-bold"> </span></h4>
+                    <h4 class="custom-label p-1"> Wind <span id="live-wind" class="mx-3 fw-bold"> </span></h4>
+                    <h4 class="custom-label p-1"> Humidity <span id="live-hum" class="mx-3 fw-bold"> </span></h4>
+                </div>
+                    
+            <div id="five-day-container" class="d-flex justify-content-evenly m-3"></div>
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+</html>
