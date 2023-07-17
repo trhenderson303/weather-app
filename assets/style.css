@@ -8,12 +8,20 @@ body{
     color:#070707b2;
 }
 
+.custom-header-box{
+    width: 100%;
+    border-bottom: solid 3px #070707b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 h1{
-    font-size: 60pt;
+    font-size: 500%;
     font-family: 'UnifrakturMaguntia', cursive;
     text-align: center;
-    margin: 2%;
-    border-bottom: solid 3px #070707b2;
+    padding: 1%;
+    
 }
 
 h2{
@@ -39,6 +47,7 @@ h6{
 p{
     font-size: 125%;
 }
+
 
 
 .custom-icon{
@@ -86,4 +95,20 @@ p{
 #forecast-box:nth-child(n+5){
     border-right: none;
 
+}
+
+
+@media screen and (max-width: 768px) {
+    h5{
+        font-size: 120%;
+    }
+    h6{
+        font-size: 110%;
+    }
+    p{
+        font-size: 100%;
+    }
+    #city-panel{
+        border-right: none;
+    }
 }
