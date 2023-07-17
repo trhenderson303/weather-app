@@ -6,14 +6,11 @@ var liveCity = document.getElementById("live-city");
 var liveTemp = document.getElementById("live-temp");
 var liveWind = document.getElementById("live-wind");
 var liveHum = document.getElementById("live-hum");
+let cities = [];
+let thisCity;
 
-
-
-function getWeather(e) {
-    e.preventDefault;
-    var city = cityInput.value;
-    localStorage.setItem("cities", city);
-    //console.log(city);
+function getWeather() {
+    let city = cityInput.value || thisCity ;
     liveCity.textContent = city;
     queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
 
@@ -22,7 +19,7 @@ function getWeather(e) {
             return response.json();
         })
         .then(function (data) {
-           // console.log(data);
+            // console.log(data);
             var forecastEl = document.querySelector("#five-day-container");
             forecastEl.innerHTML = "";
             liveTemp.textContent = data.list[0].main.temp + " ºF";
@@ -46,40 +43,42 @@ function getWeather(e) {
 
                 forecastEl.insertAdjacentHTML('beforeend', forecastData);
             }
-        }
-            
-    ).then(function renderCity() {
-        var myCities = document.querySelector(".city-list");
-        var citySave = document.createElement('button');
-        citySave.classList.add('city-btn');
-        citySave.textContent = city;
-        myCities.appendChild(citySave);
-        })
+            cityInput.value = '';
+        }, 
+    )
 };
 
+function renderCity() {
+    let city = cityInput.value;
+    cities.push(city);
+    localStorage.setItem("cities", JSON.stringify(cities));
+    var myCities = document.querySelector(".city-list");
+    var citySave = document.createElement('button');
+    citySave.classList.add('city-btn');
+    let storedCity = localStorage.getItem("cities");
+    let cityHistory = JSON.parse(storedCity);
+    for (let i = 0; i < cityHistory.length; i++){
+        citySave.textContent = cityHistory[i];
+    }
+    myCities.appendChild(citySave);
+    citySave.addEventListener("click", e => {
+        e.preventDefault;
+        thisCity = e.target.textContent;
+        getWeather(thisCity);
+    } );
+}
 
 
 
-/*
-function renderWeather(e) {
-    e.preventDefault;
-    city = savedCityBtn.textContent;
-    cityInput.value = city;
-    getWeather();
-} */
 
 
 
-var savedCity = document.getElementsByClassName("city-btn"); 
-console.log(savedCity.length);
-for (var i = 0; i < savedCity.length; i++) {
-    savedCity[i].addEventListener("click", e => {
-        city = e.target.textContent
-        console.log(city);
-    })
-};
 
 
+
+
+searchBtn.addEventListener("click", renderCity);
 searchBtn.addEventListener("click", getWeather);
+
 
 

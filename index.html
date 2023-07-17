@@ -19,7 +19,7 @@
             <div class="col col-sm-12 col-md-4 col-lg-3 p-3" id="city-panel">
                 <div id="city-search-box" class="d-flex flex-column pb-3"> 
                     <h3> CITY FINDER </h3>
-                    <input type="text" id="city-search-input" class="rounded-3 my-2" placeholder="Enter a city">
+                    <input type="text" id="city-search-input" class="rounded-3 my-2" onfocus="this.value=''" placeholder="Enter a city">
                     <button id="search-button" class="rounded-3 p-2"> SEARCH </button> 
                 </div>
                 <div id="my-cities-box" class="d-flex flex-column">
@@ -29,8 +29,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col col-sm-12 col-md-8 col-lg-9 p-3">
-                <div id="current-weather-box" class="d-flex flex-column border-1 mr-2">
+            <div class="col col-sm-12 col-md-8 col-lg-9 p-1">
+                <div id="current-weather-box" class="d-flex flex-column border-1 p-5 mr-2">
                     <h2 id="live-city"> City </h2>
                     <h4 class="custom-label p-1"> Temperature <span id="live-temp" class="mx-3 fw-bold"> </span></h4>
                     <h4 class="custom-label p-1"> Wind <span id="live-wind" class="mx-3 fw-bold"> </span></h4>
