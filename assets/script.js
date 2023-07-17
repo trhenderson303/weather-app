@@ -12,7 +12,7 @@ let thisCity;
 function getWeather() {
     let city = cityInput.value || thisCity ;
     liveCity.textContent = city;
-    queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
+    queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey + "&units=imperial";
 
     fetch(queryURL)
         .then(function (response) {
