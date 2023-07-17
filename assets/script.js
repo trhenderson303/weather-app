@@ -33,7 +33,7 @@ function getWeather() {
                 var forecastData = `
                 <div id="forecast-box" class="p-2 pr-5">
                 <h5> ${forecastDate} </h5>
-                <img class="img-fluid m-4 custom-icon" src="http://openweathermap.org/img/wn/${data.list[i].weather[0].icon
+                <img class="img-fluid m-4 custom-icon" src="https://openweathermap.org/img/wn/${data.list[i].weather[0].icon
                     }.png" alt="weather icon" />
                 <h6> ${forecastTemp}ºF </h6>
                 <p> Wind: <span class="fw-bold">${forecastWind}</span>MPH </p>
